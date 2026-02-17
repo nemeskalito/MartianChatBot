@@ -20,7 +20,6 @@ async function notification(bot) {
 					caption: `
 • Правила группы|чата - ${rulesLink}
 • Собрать расу Martian - ${banker}
-• Конкурсы в группе|чате - ${contests}
 • Мониторинг предложений - ${salesBot}
                    `,
 									 parse_mode: 'HTML'
@@ -33,5 +32,6 @@ async function notification(bot) {
     await delay(12 * 60 * 60 * 1000); // ждем 12 часов перед следующей отправкой
   }
 }
+// • Конкурсы в группе|чате - ${contests}
 
 module.exports = { notification };
