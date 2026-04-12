@@ -5,7 +5,14 @@ const { initAntiLinks } = require('./modules/antiLinks.js');
 const { initGreeting } = require('./modules/greeting.js');
 const { notification } = require('./modules/notification.js');
 
-const bot = new TelegramBot(process.env.API_CHATBOT, { polling: true });
+console.log('🔑 Токен загружен:', process.env.API_CHATBOT ? '✅ ДА' : '❌ НЕТ');
+
+
+const bot = new TelegramBot(process.env.API_CHATBOT, {
+  polling: true,
+  baseApiUrl: 'https://tg-proxy.borisenko-igor2021.workers.dev'  // ← без /bot
+});
+
 
 initAntiLinks(bot);
 initGreeting(bot);
