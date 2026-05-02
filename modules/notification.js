@@ -3,6 +3,7 @@ const CHAT_ID = -1003466478781;
 const rulesLink = `<a href="https://t.me/c/3466478781/519">Здесь</a>`;
 const banker = `<a href="https://t.me/komikscom">Здесь</a>`;
 const salesBot = `<a href="https://t.me/+cZmAlq2oiPcwZWUy">Здесь</a>`;
+const boutique = `<a href="https://t.me/+98EaK9U5Vu9lMjEy">Здесь</a>`;
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -26,6 +27,7 @@ async function notification(bot) {
 • Правила группы|чата - ${rulesLink}
 • Собрать расу Martian - ${banker}
 • Мониторинг предложений - ${salesBot}
+• UFO помощь - ${boutique}
         `,
         { parse_mode: "HTML" }
       );
