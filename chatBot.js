@@ -6,13 +6,16 @@ const { initGreeting } = require('./modules/greeting.js');
 const { notification } = require('./modules/notification.js');
 
 console.log('🔑 Токен загружен:', process.env.API_CHATBOT ? '✅ ДА' : '❌ НЕТ');
-
-
 const bot = new TelegramBot(process.env.API_CHATBOT, {
   polling: true,
-  baseApiUrl: 'https://tg-proxy.borisenko-igor2021.workers.dev'  // ← без /bot
+  request: {
+    agentOptions: {
+      family: 4,
+      keepAlive: true,
+      timeout: 30000
+    }
+  }
 });
-
 
 initAntiLinks(bot);
 initGreeting(bot);
